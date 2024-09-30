@@ -11,5 +11,6 @@ public class Task5 {
         person2.displayInfo();
         person3.displayInfo();
         person4.displayInfo();
+        person1.helloFriend(person3);
     }
 }

@@ -6,7 +6,7 @@ public class Task4 {
     public static void main(String[] args) {
         Random random = new Random();
         for (int i = 1; i <= 5; i++) {
-            int randomInt = random.nextInt(100) + 1;
+            int randomInt = random.nextInt(9) +1;
             System.out.println(randomInt);
         }
     }

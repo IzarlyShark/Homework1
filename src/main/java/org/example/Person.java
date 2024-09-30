@@ -6,37 +6,39 @@ package org.example;
 продемонстрировать их работу (вывести поля созданных обьектов) */
 public class Person {
     int age;
-    String name;
+    private String name;
 
-    {
-        name = "Billy";
-        age = 18;
-    }
-
-    /*начало блока инициализатора*/
-    /*{
-        name = "Billy";
-        age = 18;
-    }*/
+   public static int counter;
     Person() {
         this (18, "Billy");
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public void  helloFriend(Person p) {
+        System.out.println("Мой друг " + p.getName());
+    }
     Person (int age) {
         this.age = age;
+        counter++;
     }
 
     Person(String name) {
         this.name = name;
+        counter++;
     }
 
     Person(int age, String name) {
         this.age = age;
         this.name = name;
+        counter++;
     }
 
     void displayInfo(){
         System.out.printf("Name: %s \tAge: %d\n", name, age);
+        System.out.println(Person.counter);
     }
 
 }
